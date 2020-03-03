@@ -1,0 +1,237 @@
+html {
+  margin: 0;
+}
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 480px;
+  height: 100vh;
+  margin: 0;
+
+  font-family: 'Calibri', sans-serif;
+  background: white;
+}
+#wrapper {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: inline-flex;
+  padding: 0 15vw 5vh 5vw;
+}
+main {
+  max-width: 70em;
+}
+
+a:link {
+  color: #06b;
+  text-decoration: none;
+}
+a:visited {
+  color: #205;
+  text-decoration: none;
+}
+a:link:hover, a:visited:hover {
+  text-decoration: underline;
+}
+a:link:active, a:visited:active {
+  color: #853;
+}
+
+a.pseudo {
+  text-decoration: none !important;
+}
+a.pseudo:visited {
+  color: #06b;
+}
+a.pseudo:hover,
+a.pseudo:active {
+  color: #09f;
+}
+
+a.tel-number {
+  color: black;
+  text-decoration: none !important;
+}
+
+
+header {
+  display: none;
+}
+header .logo {
+  flex-grow: 1;
+}
+header .tel-number {
+  align-self: flex-end;
+  font-size: 1.8em;
+}
+
+
+aside {
+  min-width: 250px;
+  margin-right: 4vw;
+}
+aside > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 320px;
+  padding: 10px 0 5vh;
+  box-sizing: border-box;
+}
+aside > nav > .logo {
+  display: block;
+  width: 175px;
+  height: 150px;
+  background: url(logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#navbar a {
+  display: block;
+  padding: 0.3em 0;
+}
+#navbar a.active {
+  color: black;
+  font-weight: 600;
+}
+aside .contacts > * {
+  display: block;
+}
+aside .tel-number {
+  margin-top: 0.3em;
+  font-size: 1.5em;
+}
+
+
+.headline {
+  position: relative;
+  height: 160px;
+  margin-bottom: 2em;
+}
+.headline h1 {
+  position: absolute;
+  left: -0.05em;
+  bottom: -0.1em;
+  font-size: 4em;
+  line-height: 1;
+  margin: 0;
+}
+
+.uniform {
+  display: flex;
+  margin: 0 -2px;
+}
+.uniform figure {
+  float: left;
+  margin: 0 2px;
+  box-sizing: border-box;
+}
+.uniform img {
+  max-width: 100%;
+  max-height: 300px;
+  float: left;
+}
+
+section {
+  margin-bottom: 5em;
+}
+section h2 {
+  font-size: 2.6em;
+  font-weight: 200;
+  margin: 0;
+  margin-left: -0.05em;
+}
+section p {
+  font-size: 1.2em;
+}
+section pre {
+  white-space: pre-line;
+}
+section figure {
+  margin: 0;
+}
+section figure > img {
+  width: 100%;
+}
+section figcaption {
+  color: rgba(0,0,0,.7);
+  font-family: monospace;
+}
+
+#about p {
+  font-size: 1.4em;
+}
+
+#epk {
+  display: flex;
+  flex-wrap: wrap;
+}
+#epk > div {
+  flex: 1;
+}
+#epk > div p {
+  min-width: 250px;
+}
+#epk > figure {
+  align-self: center;
+  min-width: 400px;
+  max-width: 50%;
+  padding-left: 3vw;
+}
+
+
+footer {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  border-top: 1px solid rgba(0,0,0,.1);
+  background: #ddd;
+}
+
+
+@media (max-width: 1024px) {
+  #wrapper {
+    display: block;
+    padding-right: 5vw;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+  }
+  aside {
+    display: none;
+  }
+  .headline {
+    height: 7em;
+  }
+}
+@media(max-height: 480px) {
+  #navbar {
+    display: none;
+  }
+  .uniform {
+    display: block;
+  }
+  .uniform figure {
+    width: 100% !important;
+  }
+}
